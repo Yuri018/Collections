@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class HOmeWork36 {
+public class Homework {
 
     public static String minStringInList(List<String> list){
         String minString = Collections.min(list, new Comparator<String>() {
@@ -26,7 +26,7 @@ public class HOmeWork36 {
         return maxString;
     }
 
-    public String test(List<String> list){
+    public String findShortesrOrLongest(List<String> list){
         String minSize = list.get(0);
         int indexMin = 0;
 

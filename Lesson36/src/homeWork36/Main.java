@@ -21,50 +21,8 @@ public class Main {
         listStr.add("thirteen");
         System.out.println(listStr);
 
-        System.out.println("min element in the list - " + HOmeWork36.minStringInList(listStr));
-        System.out.println("max element in the list - " + HOmeWork36.maxStringInList(listStr));
-//        System.out.println(HOmeWork36.test(listStr));
+        System.out.println("min element in the list - " + Homework.minStringInList(listStr));
+        System.out.println("max element in the list - " + Homework.maxStringInList(listStr));
     }
-//    public static String minStringInList(List<String> list){
-//        String minString = Collections.min(list, new Comparator<String>() {
-//            @Override
-//            public int compare(String o1, String o2) {
-//                return o1.length() - o2.length();
-//            }
-//        });
-//        return minString;
-//    }
-//
-//    public static String maxStringInList(List<String> list){
-//        String maxString = Collections.max(list, new Comparator<String>() {
-//            @Override
-//            public int compare(String o1, String o2) {
-//                return o1.length() - o2.length();
-//            }
-//        });
-//        return maxString;
-//    }
-//
-//    public static String test(List<String> list){
-//        String minSize = list.get(0);
-//        int indexMin = 0;
-//
-//        String maxSize = list.get(0);
-//        int indexMax = 0;
-//
-//
-//        for (int i = 0; i < list.size(); i++) {
-//            if (list.get(i).length() < minSize.length()){
-//                minSize = list.get(i);
-//                indexMin = i;
-//            } else if (list.get(i).length() > maxSize.length()) {
-//                maxSize = list.get(i);
-//                indexMax = i;
-//            }
-//        }
-//        if (indexMin < indexMax){
-//            return minSize;
-//        } else
-//            return maxSize;
-//    }
+
 }

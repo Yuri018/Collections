@@ -13,8 +13,15 @@ public class Main {
         list.set(new Person("Oleg"), 1);
         System.out.println(list.get(1));
 
+        list.append(new Person("Max"));
+        list.append(new Person("Mary"));
+        list.append(new Person("Ann"));
 
+        System.out.println("+++++++++++++++++++++++++");
+        list.printLinkedList();
 
+        System.out.println("+++++++++++++++++++++++++");
+        list.printLinkedList2();
 
     }
 }

@@ -7,8 +7,8 @@ public class OurLinkedList<E> implements OurList<E> {
     private Node<E> last;
 
     public OurLinkedList() {
-
     }
+
 
     @Override
     public void append(E value) {
@@ -107,6 +107,25 @@ public class OurLinkedList<E> implements OurList<E> {
         }
         return null;
     }
+
+    public void printLinkedList() {
+       int index = 0;
+        while (get(index) != null) {
+            System.out.println(get(index));
+            index++;
+        }
+    }
+
+    public void printLinkedList2() {
+        String[] list = new String[size];
+        for (int i = 0; i < list.length; i++) {
+            list[i] = String.valueOf(get(i));
+        }
+        for (String s : list) {
+            System.out.println(s);
+        }
+    }
+
 
     private static class Node<E> {
         Node<E> prev;

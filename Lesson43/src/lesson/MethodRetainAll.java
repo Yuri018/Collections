@@ -5,7 +5,8 @@ import java.util.*;
 public class MethodRetainAll {
     public static void main(String[] args) {
         /*
-        Дано два списка User. Реализовать метод List<String> findDuplicates(Collection<User> collA,Collection<User> collB) который вернет лист дубликатов
+        Дано два списка User. Реализовать метод List<String> findDuplicates(Collection<User> collA,Collection<User> collB)
+        который вернет лист дубликатов
          */
 
         List<String> list1 = List.of("1", "2", "8", "5");

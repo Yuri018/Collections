@@ -34,4 +34,6 @@ public class homeWork42 {
         }
         return listOfWords;
     }
+
+
 }

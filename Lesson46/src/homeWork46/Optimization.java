@@ -26,8 +26,8 @@ public class Optimization {
         String string = "NEWSESWNNS";
 
         System.out.println(stringToList(string));
+        System.out.println(checkList(string));
 
-        System.out.println(checkList(stringToList(string)));
     }
 
     public static List<Character> stringToList(String str) {
@@ -38,24 +38,28 @@ public class Optimization {
         return stringList;
     }
 
-    public static Deque<Character> checkList(List<Character> list) {
+    public static String checkList(String str) {
+
+        if (str == null || str.isEmpty()){ return "";}
+
         Map<Character, Character> cardPoints = new HashMap<>();
         cardPoints.put('N', 'S');
+        cardPoints.put('S', 'N');
         cardPoints.put('W', 'E');
+        cardPoints.put('E', 'W');
 
         Deque<Character> stack = new LinkedList<>();
-        for (Character ch : list) {
-            if (stack.isEmpty()) {
-                stack.push(ch);
-            }                                                //"NEWSESWNNS"
-            if (cardPoints.containsKey(ch)) {
-
-
-
-            } else {
-
-            }
+        for (Character ch : str.toCharArray()) {
+           if (cardPoints.get(ch).equals(stack.peek())){
+               stack.pop();
+           } else {
+               stack.push(ch);
+           }
         }
-        return stack;
+        StringBuilder stringBuilder = new StringBuilder();
+        for (Character ch : stack){
+            stringBuilder.append(ch);
+        }
+        return stringBuilder.reverse().toString();
     }
 }

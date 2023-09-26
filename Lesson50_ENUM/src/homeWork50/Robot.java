@@ -1,7 +1,7 @@
 package homeWork50;
 
 public class Robot {
-//    String command;
+    //    String command;
     SidePoints N = SidePoints.NORTH;
     SidePoints S = SidePoints.SOUTH;
     SidePoints W = SidePoints.WEST;
@@ -10,18 +10,26 @@ public class Robot {
 //        this.command = command;
 //    }
 
-    public void commandExecution(String str){
-        if (str.isEmpty()){
+    public void commandExecution(String str) {
+        if (str.isEmpty()) {
             System.out.println("There are no commands to move");
         }
-        for (char ch: str.toCharArray()){
-            if (ch == 'N'){
+        int counter = 0;
+        for (char ch : str.toCharArray()) {
+            if (ch == 'N') {
+                System.out.print(++counter + ".");
                 N.printText();
-            }if (ch == 'S'){
+            }
+            if (ch == 'S') {
+                System.out.print(++counter + ".");
                 S.printText();
-            }if (ch== 'W'){
+            }
+            if (ch == 'W') {
+                System.out.print(++counter + ".");
                 W.printText();
-            }if (ch == 'E'){
+            }
+            if (ch == 'E') {
+                System.out.print(++counter + ".");
                 E.printText();
             }
         }

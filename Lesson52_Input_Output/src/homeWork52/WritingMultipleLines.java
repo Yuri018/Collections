@@ -19,7 +19,7 @@ public class WritingMultipleLines {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a sentence. To exit, enter \"exit\"");
 
-        try (FileWriter fileWriter = new FileWriter("Lesson52_Input_Output/src/homeWork52/result.txt")) {
+        try (FileWriter fileWriter = new FileWriter("Lesson52_Input_Output/src/homeWork52/result2.txt")) {
             while (true) {
                 String str = scanner.nextLine();
                 if (str.equalsIgnoreCase("exit")) {

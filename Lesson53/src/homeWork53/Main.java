@@ -1,8 +1,6 @@
 package homeWork53;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -47,7 +45,7 @@ greta:500
         }
     }
 
-    public static void stringProcessing(List<String> list) {
+    public static void stringProcessing(List<String> list) throws IOException {
         StringBuilder part1 = new StringBuilder();
         StringBuilder part2 = new StringBuilder();
 
@@ -61,5 +59,15 @@ greta:500
         }
         System.out.println(part1);
         System.out.println(part2);
+        writeToFile(String.valueOf(part1), "Lesson53/src/homeWork53/part1.txt");
+        writeToFile(String.valueOf(part2), "Lesson53/src/homeWork53/part2.txt");
+    }
+
+    public static void writeToFile(String str, String path) throws IOException {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(path))){
+            bw.write(str);
+            bw.newLine();
+        }
+
     }
 }

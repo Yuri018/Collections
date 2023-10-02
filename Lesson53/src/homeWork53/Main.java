@@ -45,6 +45,7 @@ greta:500
         }
     }
 
+
     public static void stringProcessing(List<String> list) throws IOException {
         StringBuilder part1 = new StringBuilder();
         StringBuilder part2 = new StringBuilder();

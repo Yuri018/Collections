@@ -1,6 +1,7 @@
 package homeWork55;
 
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -22,6 +23,9 @@ public class Main {
         System.out.println(Arrays.toString(oneDimensionArray));
         int[][] newArray = changeStringValues(arrayRandomNum, 1, 3);
         print(newArray);
+        byte[][] bytes = listStringToByteArray(List.of("qwe1", "qwe2", "привет1"));
+        System.out.println(Arrays.deepToString(bytes));
+        arrayToFile(bytes);
     }
 
     private static int[][] fillArray(int[][] arr) {
@@ -68,5 +72,25 @@ public class Main {
             }
             System.out.println();
         }
+    }
+
+    public static byte[][] listStringToByteArray(List<String> list) {
+        byte[][] result = new byte[list.size()][];
+        int rowIndex = 0;
+        for (String str : list) {
+            result[rowIndex++] = str.getBytes();
+        }
+        return result;
+    }
+    public static void arrayToFile(byte[][] arr){
+        for (int i = 0; i < arr.length; i++) {
+            byte[] currentArray = arr[i];
+            try (BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream("file_" + i))) {
+                bos.write(currentArray);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
     }
 }

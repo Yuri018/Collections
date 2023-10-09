@@ -1,6 +1,7 @@
 package lessonWork_Stream_API;
 
 import java.util.List;
+import java.util.Optional;
 
 public class Main {
     public static void main(String[] args) {
@@ -59,12 +60,26 @@ public class Main {
 
         //findAny
 
+        Optional<Panda> panda =
+                pandas.stream()
+                        .filter(a -> a.getTitle().equals("Po")).findFirst();
 
         //***********************************************************
-        //anyMatch - проверяет есть ли элемент, удовлетворяющий условию
+
+        //anyMatch - проверяет есть ли элемент, удовлетворяющий условию, т.е. предикату
         boolean anyMatch = animals.stream()
                 .anyMatch(a -> a.equals("Panda"));
         System.out.println(anyMatch);
+        boolean poExist = pandas.stream()
+                .anyMatch(a -> a.getTitle().equals("Po"));
+        System.out.println(poExist);
+
+        //***********************************************************
+
+        //    allMatch - то же самое - но удовлетворяют ли все элементы условию?
+        boolean allPandasArePo = pandas.stream()
+                .allMatch(a -> a.getTitle().equals("Po"));
+        System.out.println(allPandasArePo);
 
     }
 }

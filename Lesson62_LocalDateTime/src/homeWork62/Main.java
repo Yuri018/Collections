@@ -20,8 +20,8 @@ public class Main {
          */
         List<Conference> conferenceList = List.of(
                 new Conference("Strings", "15-10-2023", "10-30", "www.link1.com"),
-                new Conference("Integers", "16-11-2023", "12-00", "www.link2.com"),
-                new Conference("ENUM", "20-12-2023", "14-30", "www.link3.com")
+                new Conference("ENUM", "20-12-2023", "14-30", "www.link3.com"),
+                new Conference("Integers", "16-11-2023", "12-00", "www.link2.com")
         );
 
         List<Conference> sortedConferencelist = conferenceList.stream()

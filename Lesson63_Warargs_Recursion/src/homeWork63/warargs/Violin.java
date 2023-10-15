@@ -5,27 +5,27 @@ import java.time.format.DateTimeFormatter;
 
 public class Violin {
     private String name;
-    LocalDate date;
+    LocalDate productionDate;
 
     public Violin(String name, String date) {
         DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy");
         this.name = name;
-        this.date = LocalDate.parse(date, dateFormatter);
+        this.productionDate = LocalDate.parse(date, dateFormatter);
     }
 
     public String getName() {
         return name;
     }
 
-    public LocalDate getDate() {
-        return date;
+    public LocalDate getProductionDate() {
+        return productionDate;
     }
 
     @Override
     public String toString() {
         return "Violin{" +
                 "name='" + name + '\'' +
-                ", date=" + date +
+                ", date=" + productionDate +
                 '}';
     }
 }

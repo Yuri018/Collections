@@ -30,6 +30,7 @@
       <module fileurl="file://$PROJECT_DIR$/Lesson61_Date/Lesson61_Date.iml" filepath="$PROJECT_DIR$/Lesson61_Date/Lesson61_Date.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lesson62_LocalDateTime/Lesson62_LocalDateTime.iml" filepath="$PROJECT_DIR$/Lesson62_LocalDateTime/Lesson62_LocalDateTime.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lesson63_Warargs_Recursion/Lesson63_Warargs_Recursion.iml" filepath="$PROJECT_DIR$/Lesson63_Warargs_Recursion/Lesson63_Warargs_Recursion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lesson64_Threads/Lesson64_Threads.iml" filepath="$PROJECT_DIR$/Lesson64_Threads/Lesson64_Threads.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lesson39/setDemo/setDemo.iml" filepath="$PROJECT_DIR$/Lesson39/setDemo/setDemo.iml" />
     </modules>
   </component>

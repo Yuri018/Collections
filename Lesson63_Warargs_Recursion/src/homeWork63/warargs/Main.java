@@ -16,19 +16,28 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println(getNameOldViolinMaker(
-                new Violin("Paganini", "1680"),
-                new Violin("Stradivari", "1720"),
-                new Violin("Amity", "1851")));
+                new Violin("Paganini", "1680-10-23"),
+                new Violin("Stradivari", "1720-04-12"),
+                new Violin("Amity", "1851-12-12")));
 
 
     }
     public static String getNameOldViolinMaker(Violin ...violins){
-        String result ="";
-        String string = Arrays.stream(violins)
-                .sorted(Comparator.comparingInt(a -> (Integer.parseInt(String.valueOf(a.getProductionDate())))))
-                .toString();
+//        String result ="";
+//        String string = Arrays.stream(violins)
+//                .sorted(Comparator.comparingInt(a -> (Integer.parseInt(String.valueOf(a.getProductionDate())))))
+//                .toString();
 
+        if (violins.length == 0){
+            return null;
+        }
+        Violin oldViolin = violins[0];
+        for (Violin violin: violins){
+            if (oldViolin.getProductionDate().isAfter(violin.getProductionDate())){
+                oldViolin = violin;
+            }
+        }
 
-        return string;
+        return oldViolin.getName();
     }
 }

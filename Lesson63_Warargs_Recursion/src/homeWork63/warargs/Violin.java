@@ -8,7 +8,7 @@ public class Violin {
     LocalDate productionDate;
 
     public Violin(String name, String date) {
-        DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy");
+        DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         this.name = name;
         this.productionDate = LocalDate.parse(date, dateFormatter);
     }
